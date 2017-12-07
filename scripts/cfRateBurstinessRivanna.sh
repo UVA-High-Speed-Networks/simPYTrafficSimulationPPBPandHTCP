@@ -30,7 +30,7 @@ do
       SLURM_SCRIPT=$Script_Slurm_Dir/${prefix}.qpbs
 
       logFile=$prefix"_log.txt"
-      CMD='stdbuf -o0 -e0 time python '$Prog_Name' '$rtt' '$rate' '$m_burstArrivals' '$cbr' > '$Data_Dir/$logFile
+      CMD='stdbuf -o0 -e0 time python '$Prog_Name' '$rtt' '$rate' '$m_burstArrivals' '$cbr' '$i' > '$Data_Dir/$logFile
       echo $CMD
       rm ${SLURM_SCRIPT}
       echo "#!/bin/sh" > ${SLURM_SCRIPT}
